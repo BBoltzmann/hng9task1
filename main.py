@@ -6,8 +6,11 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def  home_page():
-    # a='hey ma'
-    data_set={"slackUsername":'Bboltzmann', "backend": True, "age": 99, "bio": 'Hate me' }
+    userName  = 'Bboltzmann'
+    age = 99
+    backend = False
+    bio = 'Hate me'
+    data_set={"slackUsername":userName, "backend": backend, "age": age, "bio": bio }
     json_dump = json.dumps(data_set)
 
     return json_dump
