@@ -14,14 +14,14 @@ def  home_page():
 
     return json_dump
 
-@app.route('/user/', methods=['GET'])
-def  request_page():
-    user_query = str(request.args.get('user')) #/user/?user=bboltzmann
+# @app.route('/user/', methods=['GET'])
+# def  request_page():
+#     user_query = str(request.args.get('user')) #/user/?user=bboltzmann
 
-    data_set={"Page":'Request', "Message": f'Successfully got the request for {user_query}', 'time':time.time() }
-    json_dump = json.dumps(data_set)
+#     data_set={"Page":'Request', "Message": f'Successfully got the request for {user_query}', 'time':time.time() }
+#     json_dump = json.dumps(data_set)
 
-    return json_dump
+#     return json_dump
 
 if __name__ == "__main__":
     app.run()
