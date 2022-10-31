@@ -9,11 +9,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def  home_page():
-    a ='hey'
-    # data_set={"slackUsername":'Bboltzmann', "backend": True, "age": 99, "bio": 'Hate me' }
-    # json_dump = json.dumps(data_set)
+    data_set={"slackUsername":'Bboltzmann', "backend": True, "age": 99, "bio": 'Hate me' }
+    json_dump = json.dumps(data_set)
 
-    return a
+    return json_dump
 
 # @app.route('/user/', methods=['GET'])
 # def  request_page():
