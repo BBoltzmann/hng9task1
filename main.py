@@ -11,9 +11,9 @@ def  home_page():
     backend = True
     bio = 'Hate me'
     data_set={"slackUsername":userName, "backend": backend, "age": age, "bio": bio }
-    json_dump = json.dumps(data_set)
+    # json_dump = json.dumps(data_set)
 
-    return json_dump
+    return data_set
 
 # @app.route('/user/', methods=['GET'])
 # def  request_page():
