@@ -8,7 +8,7 @@ app = Flask(__name__)
 def  home_page():
     userName  = 'Bboltzmann'
     age = 99
-    backend = False
+    backend = True
     bio = 'Hate me'
     data_set={"slackUsername":userName, "backend": backend, "age": age, "bio": bio }
     json_dump = json.dumps(data_set)
