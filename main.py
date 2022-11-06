@@ -26,19 +26,32 @@ def  calculator():
     operation_id = [item.name for item in OperationType] 
     for data in operation_slpit: 
         if data in operation or data in operation_id:
-            if data == 'addition' or 'add':
-                result = x+y
-                result = result
-            elif data == 'subtraction' or 'subtract':
-                result = x-y
-            elif data == 'multiplication' or 'multiply':
-                result = x*y
-        data_set={"slackUsername":userName, "result": result, "operation_type":data }        
-        # else:
-        #     result = 'Please enter correct data'
-        #     data_set={"slackUsername":userName, "result": result, "operation_type":'null' }
-
-          
+            match data:
+                case 'addition':
+                    result = x+y
+                case 'add':
+                    result = x+y
+                case 'subtraction':
+                    result = x-y
+                case 'subtract':
+                    result = x-y
+                case 'multiplication':
+                    result = x*y
+                case 'multiply':
+                    result = x*y
+            # if data == 'addition' or 'add':
+            #     result = x+y
+            #     continue
+            # if data == 'subtraction' or 'subtract':
+            #     result = x-y
+            #     continue
+            # if data == 'multiplication' or 'multiply':
+            #     result = x*y
+            data_set={"slackUsername":userName, "result": result, "operation_type":data }        
+        else:
+            result = 'Please enter correct data'
+            data_set={"slackUsername":userName, "result": result, "operation_type":'null' }
+   
     return jsonify(data_set)
 
 
